@@ -1,6 +1,6 @@
 # angularjs-mytodo
 My Todo application build with AngularJS.<br/>
-This example inspired from [TodoMVC](http://todomvc.com/).<br/>
+This example inspired by [TodoMVC](http://todomvc.com/).<br/>
 No backend API yet.
 
 # setup
