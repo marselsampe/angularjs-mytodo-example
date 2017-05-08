@@ -1,0 +1,12 @@
+{
+  "name": "my-todo",
+  "version": "1.0.0",
+  "description": "my todo application example with AngularJS",
+  "author": "Marsel",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.5.x",
+    "bootstrap": "3.3.x",
+    "jquery": "^3.2.1"
+  }
+}
