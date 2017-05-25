@@ -45,7 +45,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="mytodo-div-check">
-							<input type="checkbox" ng-model="data.done" style="-webkit-transform: scale(2)"/>
+							<input type="checkbox" ng-model="data.done" ng-change="ChangeStatusCommand(data)" style="-webkit-transform: scale(2)"/>
 						</div>
 						<div class="mytodo-div-data">
 							<div ng-if="data.done == false" class="alert alert-warning">{{ data.name }}</div>

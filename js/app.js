@@ -8,7 +8,8 @@ mainModule.factory( 'myStorage', function(){
 		GetAllData : GetAllData,
 		AddData: AddData,
 		UpdateData: UpdateData,
-		DeleteData: DeleteData
+		DeleteData: DeleteData,
+		ChangeStatus : ChangeStatus
 	};
 
 	function GetAllData(){
@@ -35,6 +36,14 @@ mainModule.factory( 'myStorage', function(){
 			}
 		}
 	}
+
+	function ChangeStatus(data){
+		for(var i=0; i<_listData.length; i++){
+			if(_listData[i].id == data.id){
+				_listData[i] = data;
+			}
+		}
+	}
 } );
 
 mainModule.controller( 'myController', function ( $scope, myStorage ){
@@ -49,6 +58,7 @@ mainModule.controller( 'myController', function ( $scope, myStorage ){
 	$scope.EditCommand = EditCommand;
 	$scope.CancelEditCommand = CancelEditCommand;
 	$scope.DeleteCommand = DeleteCommand;
+	$scope.ChangeStatusCommand = ChangeStatusCommand;
 
 	Initialization();
 
@@ -86,5 +96,9 @@ mainModule.controller( 'myController', function ( $scope, myStorage ){
 	function DeleteCommand(data){
 		_myStorage.DeleteData(data);
 		Refresh();
+	}
+
+	function ChangeStatusCommand(data){
+		_myStorage.ChangeStatus(data);
 	}
 } );
